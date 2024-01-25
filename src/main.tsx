@@ -6,28 +6,12 @@ import Header from "./Header/Header.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/egofolio/",
     element: <Header />,
   },
   {
-    path: "/about",
-    element: <h1>About</h1>,
-  },
-  {
-    path: "/contact",
-    element: <h1>Contact</h1>,
-  },
-  {
-    path: "/projects",
-    element: <h1>Projects</h1>,
-  },
-  {
-    path: "/skills",
-    element: <h1>Skills</h1>,
-  },
-  {
-    path: "/work",
-    element: <h1>Work</h1>,
+    path: "*",
+    element: <h1>404 Not Found</h1>,
   },
 ]);
 
