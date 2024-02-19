@@ -29,3 +29,10 @@ html, body {
   font-weight: 400;
   color: #d9d9d9;
 }
+
+.text-style-32-w500 {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #d9d9d9;
+}
