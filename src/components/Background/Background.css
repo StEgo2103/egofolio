@@ -1,0 +1,33 @@
+.background {
+  display: grid;
+  grid-template-columns: 4.063rem 4.375rem auto 4.375rem 4.063rem;
+  grid-template-rows: 4.063rem 4.375rem auto;
+  min-height: 100vh;
+}
+
+.top-row {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  background-color: #252525;
+}
+
+.left-column,
+.right-column {
+  background-color: #252525;
+}
+
+.main-content {
+  grid-column: 3;
+  grid-row: 3;
+  padding: 3.125rem 3.125rem 3.125rem;
+}
+
+.left-column {
+  grid-column: 2;
+  grid-row: 1 / -1;
+}
+
+.right-column {
+  grid-column: 4;
+  grid-row: 1 / -1;
+}

@@ -1,0 +1,50 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.four-cards {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  filter: drop-shadow(0 0 10px #000);
+}
+
+.clubs-card {
+  padding-top: 50px;
+  rotate: -35deg;
+  transition: transform 0.5s ease;
+}
+.clubs-card:hover {
+  transform: translate(-10px, -20px);
+}
+
+.heart-card {
+  rotate: -15deg;
+  transition: transform 0.5s ease;
+}
+.heart-card:hover {
+  transform: translate(-5px, -20px);
+}
+
+.spade-card {
+  rotate: 15deg;
+  transition: transform 0.5s ease;
+}
+.spade-card:hover {
+  transform: translate(5px, -20px);
+}
+
+.diamond-card {
+  padding-top: 50px;
+  rotate: 35deg;
+  transition: transform 0.5s ease;
+}
+.diamond-card:hover {
+  transform: translate(10px, -20px);
+}
