@@ -9,11 +9,11 @@ import HomePage from "./pages/Home/Home";
 
 const router = createBrowserRouter([
   {
-    path: "/egofolio/",
+    path: "/",
     element: <StartPage />,
   },
   {
-    path: "/egofolio/home",
+    path: "/home",
     element: <HomePage />,
   },
   {
