@@ -1,13 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Background from "./components/Background/Background";
+import StartPage from "./pages/Start/Start";
+
 import "./index.css";
-import Header from "./Header/Header.tsx";
+import HomePage from "./pages/Home/Home";
 
 const router = createBrowserRouter([
   {
     path: "/egofolio/",
-    element: <Header />,
+    element: <StartPage />,
+  },
+  {
+    path: "/egofolio/home",
+    element: <HomePage />,
   },
   {
     path: "*",
@@ -17,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Background>
+      <RouterProvider router={router} />
+    </Background>
   </React.StrictMode>
 );
