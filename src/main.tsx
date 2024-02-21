@@ -6,6 +6,9 @@ import StartPage from "./pages/Start/Start";
 import HomePage from "./pages/Home/Home";
 
 import "./index.css";
+import AboutPage from "./pages/About/About";
+import ContactPage from "./pages/Contact/Contact";
+import CompetenciesPage from "./pages/Competencies/Competencies";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +16,20 @@ const router = createBrowserRouter([
     element: <StartPage />,
   },
   {
-    path: "/home",
+    path: "/menu",
     element: <HomePage />,
+  },
+  {
+    path: "/itsme",
+    element: <AboutPage />,
+  },
+  {
+    path: "/power",
+    element: <CompetenciesPage />,
+  },
+  {
+    path: "/callme",
+    element: <ContactPage />,
   },
   {
     path: "*",

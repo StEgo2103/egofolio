@@ -13,7 +13,7 @@ const StartPage = () => {
   const navigateToHome = () => {
     setIsClicked(true);
     setTimeout(() => {
-      navigate("/home");
+      navigate("/menu");
     }, 500);
   };
 

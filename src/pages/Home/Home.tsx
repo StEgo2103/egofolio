@@ -11,10 +11,22 @@ import spades from "../../assets/svg/spade.svg";
 import diamonds from "../../assets/svg/diamond.svg";
 
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   const [open, setOpen] = useState(false);
   const [count, setCount] = useState(-1);
+
+  const navigate = useNavigate();
+  const navigateToAbout = () => {
+    navigate("/itsme");
+  };
+  const navigateToContact = () => {
+    navigate("/callme");
+  };
+  const navigateToCompetencies = () => {
+    navigate("/power");
+  };
 
   const getText = () => {
     switch (true) {
@@ -57,36 +69,77 @@ export default function HomePage() {
     <PageTransions>
       <div className="content">
         <div className="four-cards">
-          <div className="clubs-card">
-            <ReactSVG src={clubs} />
-          </div>
-          <div className="heart-card">
-            <ReactSVG src={hearts} className="card" />
-          </div>
-          <div className="spade-card">
-            <ReactSVG src={spades} className="card" />
-          </div>
-          <div className="diamond-card">
-            <ReactSVG src={diamonds} className="card" />
-          </div>
+          <motion.div
+            initial={{ translateX: -1000 }}
+            animate={{ translateX: 0 }}
+            transition={{ duration: 0.5 }}
+            children={
+              <div className="clubs-card" onClick={navigateToAbout}>
+                <ReactSVG src={clubs} />
+              </div>
+            }
+          />
+          <motion.div
+            initial={{ translateY: -1000, translateX: -1000 }}
+            animate={{ translateY: 0, translateX: 0 }}
+            transition={{ duration: 0.5 }}
+            children={
+              <div className="heart-card">
+                <ReactSVG
+                  src={hearts}
+                  className="card"
+                  onClick={navigateToCompetencies}
+                />
+              </div>
+            }
+          />
+          <motion.div
+            initial={{ translateY: -1000, translateX: 1000 }}
+            animate={{ translateY: 0, translateX: 0 }}
+            transition={{ duration: 0.5 }}
+            children={
+              <div className="spade-card">
+                <ReactSVG src={spades} className="card" />
+              </div>
+            }
+          />
+          <motion.div
+            initial={{ translateX: 1000 }}
+            animate={{ translateX: 0 }}
+            transition={{ duration: 0.5 }}
+            children={
+              <div className="diamond-card">
+                <ReactSVG
+                  src={diamonds}
+                  className="card"
+                  onClick={navigateToContact}
+                />
+              </div>
+            }
+          />
         </div>
         <motion.div
-          className="shape"
-          animate={{
-            rotate: [15, -15, 15],
-            borderRadius: ["50%"],
-          }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-          children={<h2 className="text-style-32-w500">Pick a card</h2>}
-          onClick={handleClick}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.3 }}
+          children={
+            <motion.div
+              className="shape"
+              animate={{
+                rotate: [15, -15, 15],
+                borderRadius: ["50%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
+              children={<h2 className="text-style-32-w500">Pick a card</h2>}
+              onClick={handleClick}
+            />
+          }
         />
-        {/* <div className="shape" onClick={handleClick}>
-        <h2 className="text-style-32-w500">Pick a card</h2>
-      </div> */}
+
         <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
           open={open}
