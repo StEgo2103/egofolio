@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Background from "./components/Background/Background";
 import StartPage from "./pages/Start/Start";
+import HomePage from "./pages/Home/Home";
 
 import "./index.css";
-import HomePage from "./pages/Home/Home";
 
 const router = createBrowserRouter([
   {
