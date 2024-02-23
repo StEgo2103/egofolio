@@ -21,11 +21,14 @@ export default function HomePage() {
   const navigateToAbout = () => {
     navigate("/itsme");
   };
-  const navigateToContact = () => {
-    navigate("/callme");
-  };
   const navigateToCompetencies = () => {
     navigate("/power");
+  };
+  const navigateToProjects = () => {
+    navigate("/whatido");
+  };
+  const navigateToContact = () => {
+    navigate("/callme");
   };
 
   const getText = () => {
@@ -70,8 +73,8 @@ export default function HomePage() {
       <div className="content">
         <div className="four-cards">
           <motion.div
-            initial={{ translateX: -1000 }}
-            animate={{ translateX: 0 }}
+            initial={{ translateX: -1000, rotate: 270 }}
+            animate={{ translateX: 0, rotate: 0}}
             transition={{ duration: 0.5 }}
             children={
               <div className="clubs-card" onClick={navigateToAbout}>
@@ -80,8 +83,8 @@ export default function HomePage() {
             }
           />
           <motion.div
-            initial={{ translateY: -1000, translateX: -1000 }}
-            animate={{ translateY: 0, translateX: 0 }}
+            initial={{ translateY: -1000, translateX: -1000, rotate: 270  }}
+            animate={{ translateY: 0, translateX: 0, rotate: 0}}
             transition={{ duration: 0.5 }}
             children={
               <div className="heart-card">
@@ -94,18 +97,22 @@ export default function HomePage() {
             }
           />
           <motion.div
-            initial={{ translateY: -1000, translateX: 1000 }}
-            animate={{ translateY: 0, translateX: 0 }}
+            initial={{ translateY: -1000, translateX: 1000, rotate: 270  }}
+            animate={{ translateY: 0, translateX: 0, rotate: 0}}
             transition={{ duration: 0.5 }}
             children={
               <div className="spade-card">
-                <ReactSVG src={spades} className="card" />
+                <ReactSVG
+                  src={spades}
+                  className="card"
+                  onClick={navigateToProjects}
+                />
               </div>
             }
           />
           <motion.div
-            initial={{ translateX: 1000 }}
-            animate={{ translateX: 0 }}
+            initial={{ translateX: 1000, rotate: 270  }}
+            animate={{ translateX: 0, rotate: 0}}
             transition={{ duration: 0.5 }}
             children={
               <div className="diamond-card">

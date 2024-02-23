@@ -4,11 +4,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Background from "./components/Background/Background";
 import StartPage from "./pages/Start/Start";
 import HomePage from "./pages/Home/Home";
-
-import "./index.css";
 import AboutPage from "./pages/About/About";
 import ContactPage from "./pages/Contact/Contact";
 import CompetenciesPage from "./pages/Competencies/Competencies";
+import ProjectsPage from "./pages/Projects/Projects";
+
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/power",
     element: <CompetenciesPage />,
+  },
+  {
+    path: "/whatido",
+    element: <ProjectsPage />,
   },
   {
     path: "/callme",

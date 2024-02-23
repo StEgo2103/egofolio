@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.text-style-32-w500 {
+  user-select: none;
+}
+
 .four-cards {
   display: flex;
   flex-direction: row;
