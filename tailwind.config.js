@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'mySurface': '#efefef',
+				egoBlue: '#7DB9EC'
 			}
 		}
 	},
