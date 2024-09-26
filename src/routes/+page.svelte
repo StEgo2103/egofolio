@@ -61,6 +61,7 @@
 				<div class="border-l-1 border-black h-auto"></div>
 				<button
 					type="button"
+					class="flag"
 					style={lang === 'fr' ? 'border-width: 1px; border-color: black; border-radius: 4px' : ''}
 					on:click={() => setLang('fr')}
 				>
@@ -68,6 +69,7 @@
 				</button>
 				<button
 					type="button"
+					class="flag"
 					style={lang === 'en' ? 'border-width: 1px; border-color: black; border-radius: 4px' : ''}
 					on:click={() => setLang('en')}
 				>
@@ -81,16 +83,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex justify-center items-center h-screen">
-		<div class="w-auto flex flex-col items-center">
-			<h1 class="text-8xl pb-4 font-normal">Hey, I'm Luca</h1>
-			<div class="w-full border-1 border-black"></div>
-			<h2 class="text-5xl pt-4 font-light">Web & Mobile Developer</h2>
-		</div>
-	</div>
 	<section id="home" class="flex justify-center items-center h-screen">
 		<div class="w-auto flex flex-col items-center">
-			<h1 class="text-8xl pb-4 font-normal">Hey, I'm Luca</h1>
+			<h1 class="text-8xl pb-4 font-normal">Hey 👋, I'm Luca</h1>
 			<div class="w-full border-1 border-black"></div>
 			<h2 class="text-5xl pt-4 font-light">Web & Mobile Developer</h2>
 		</div>
@@ -114,7 +109,14 @@
 	}
 
 	a:hover {
-		transform: translateY(-4px);
-		font-weight: 600;
+		transform: translateY(-4px) scale(1.1);
+	}
+
+	.flag {
+		transition: transform 0.3s ease;
+	}
+
+	.flag:hover {
+		transform: scale(1.1);
 	}
 </style>
