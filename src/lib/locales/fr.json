@@ -1,0 +1,15 @@
+{
+	"locale": "fr",
+	"title": "Salut 👋, je suis Luca",
+	"job": "Développeur Web & Mobile",
+	"bio": "Développeur spécialisé en <b>Web</b> et <b>Mobile</b> sur plusieurs technologies, j’aime découvrir de nouveaux langages et je suis curieux de toutes les nouveautés de ce domaine.",
+	"projects": "Projets",
+	"education": "Actuellement en 4ᵉ année à <a href=\"https://www.epitech.eu/\" class=\"underline rounded-md p-1 text-epitechBlue hover:bg-blackEgo hover:transition-bg-color hover:transition-ease hover:transition-300\" target=\"_blank\">Epitech Toulouse</a> et en échange universitaire à <a href=\"https://www.csulb.edu/\" class=\"underline rounded-md p-1 text-lbYellow hover:bg-blackEgo hover:transition-bg-color hover:transition-ease hover:transition-300\" target=\"_blank\">California State University, Long Beach</a>, j’ai pu développer mon esprit d’équipe, mon adaptabilité et mes compétences dans cet univers très vaste.",
+	"contact": "Je suis ouvert à toutes propositions ou connexions ; n’hésitez pas à me <a href=\"#contact\" class=\"underline rounded-md p-1 hover:text-white hover:bg-blackEgo hover:transition-bg-color hover:transition-ease hover:transition-300\">contacter</a> pour plus d’informations.",
+	"reepair": "Reepair est une plateforme qui met en relation les personnes ayant besoin de réparations avec des professionnels. Je travaille sur la partie dédiée aux professionnels en utilisant Flutter.",
+	"top": "The Optimum Prod est une plateforme conçue pour aider à la gestion et à l’organisation d’une entreprise. Je travaille sur l’application mobile en utilisant Flutter.",
+	"egofolio": "Egofolio est mon portfolio personnel, conçu et développé par moi-même avec SvelteKit.",
+	"savy": "Savy est notre EIP (Epitech Innovative Project), une solution d’apprentissage linguistique propulsée par l’intelligence artificielle (IA) toujours en développement. J'ai conçu et développé l'application iOS en Swift dans une équipe de six personnes.",
+	"maker": "Maker est une plateforme web pour automatiser des actions, similaire à Zapier ou IFTTT. J'ai conçu et travaillé sur le front-end en utilisant Flutter dans une équipe de cinq personnes.",
+	"send": "Envoyer"
+}
