@@ -15,12 +15,18 @@
 	const sections = ['home', 'projects', 'contact'];
 
 	const updateActiveSection = () => {
-		sections.forEach((section) => {
-			const element = document.getElementById(section);
-			if (element && window.scrollY >= element.offsetTop - 50) {
-				activeSection = section;
-			}
-		});
+		const reachedBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+
+		if (reachedBottom) {
+			activeSection = sections[sections.length - 1];
+		} else {
+			sections.forEach((section) => {
+				const element = document.getElementById(section);
+				if (element && window.scrollY >= element.offsetTop - 50) {
+					activeSection = section;
+				}
+			});
+		}
 	};
 
 	const updateCursor = () => {
@@ -142,7 +148,7 @@
 				<!-- <button>Download my CV</button> -->
 			</div>
 			<div class="flex justify-center w-1/3">
-				<form class="flex flex-col" name="contact" method="POST" data-netlify="true">
+				<form class="flex flex-col" name="contact" data-netlify="true">
 					<input type="hidden" name="form-name" value="contact" />
 					<input type="text" name="name" placeholder="Name" class="w-80" required />
 					<input type="email" name="email" placeholder="Email" class="w-80" required />
