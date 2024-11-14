@@ -150,12 +150,12 @@
 			<div class="flex justify-center w-1/3">
 				<form
 					class="flex flex-col"
-					name="netlify-form-example"
+					name="netlify-form"
 					method="POST"
-					netlify-honeypot="bot-field"
+					data-netlify-honeypot="bot-field"
 					data-netlify="true"
 				>
-					<input type="hidden" name="form-name" value="netlify-form-example" />
+					<input type="hidden" name="form-name" value="netlify-form" />
 					<input type="text" name="name" placeholder="Name" class="w-80" required />
 					<input type="email" name="email" placeholder="Email" class="w-80" required />
 					<textarea name="message" placeholder="Message" class="w-80" rows="5" required></textarea>
