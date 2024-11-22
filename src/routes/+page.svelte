@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ProjectCard from './../lib/components/project-card.svelte';
 	import { onMount } from 'svelte';
-	import { t, locale, init } from 'svelte-i18n';
+	import { t, locale } from 'svelte-i18n';
 	import { projects } from '$lib/projects';
 	import usFlag from '$lib/img/flag_us.svg';
 	import frFlag from '$lib/img/flag_fr.svg';
@@ -15,7 +15,7 @@
 	const sections = ['home', 'projects', 'contact'];
 
 	const updateActiveSection = () => {
-		const reachedBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+		const reachedBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 1;
 
 		if (reachedBottom) {
 			activeSection = sections[sections.length - 1];
@@ -63,47 +63,51 @@
 	});
 </script>
 
-<div class="">
-	<div class="fixed right-10">
-		<div class="flex justify-end">
-			<div class="flex gap-x-5 border-1 border-black bg-white p-3 mt-5 rounded-xl relative">
-				<a class="navbar" href="#home" class:active={activeSection === 'home'}>Home</a>
-				<a class="navbar" href="#projects" class:active={activeSection === 'projects'}>Projects</a>
-				<a class="navbar" href="#contact" class:active={activeSection === 'contact'}>Contact</a>
-				<div class="border-l-1 border-black h-auto"></div>
-				<button
-					type="button"
-					class="flag"
-					style={lang === 'fr'
-						? 'border-width: 1px; border-color: black; border-radius: 4px'
-						: 'opacity: 0.5'}
-					on:click={() => setLang('fr')}
-				>
-					<img src={frFlag} alt="fr-flag" />
-				</button>
-				<button
-					type="button"
-					class="flag"
-					style={lang === 'en'
-						? 'border-width: 1px; border-color: black; border-radius: 4px'
-						: 'opacity: 0.5'}
-					on:click={() => setLang('en')}
-				>
-					<img src={usFlag} alt="us-flag" />
-				</button>
-				<div
-					class="absolute bottom-1 rounded-lg left-0 h-1 bg-egoBlue transition-all ease-in-out duration-300"
-					bind:this={cursor}
-					style="transform: translateX(var(--cursorX)); width: var(--cursorWidth);"
-				></div>
-			</div>
+<div>
+	<div class="fixed w-full md:w-auto md:right-10">
+		<div
+			class="flex justify-around gap-x-5 border-b md:border border-black bg-white md:bg-opacity-80 p-3 md:mt-5 md:rounded-xl relative"
+		>
+			<a class="navbar" href="#home" class:active={activeSection === 'home'}>Home</a>
+			<a class="navbar" href="#projects" class:active={activeSection === 'projects'}>Projects</a>
+			<a class="navbar" href="#contact" class:active={activeSection === 'contact'}>Contact</a>
+			<div class="border-l-1 border-black h-auto"></div>
+			<button
+				type="button"
+				class="flag"
+				style={lang === 'fr'
+					? 'border-width: 1px; border-color: black; border-radius: 4px'
+					: 'opacity: 0.5'}
+				on:click={() => setLang('fr')}
+			>
+				<img src={frFlag} alt="fr-flag" />
+			</button>
+			<button
+				type="button"
+				class="flag"
+				style={lang === 'en'
+					? 'border-width: 1px; border-color: black; border-radius: 4px'
+					: 'opacity: 0.5'}
+				on:click={() => setLang('en')}
+			>
+				<img src={usFlag} alt="us-flag" />
+			</button>
+			<div
+				class="absolute bottom-1 rounded-lg left-0 h-1 bg-egoBlue transition-all ease-in-out duration-300"
+				bind:this={cursor}
+				style="transform: translateX(var(--cursorX)); width: var(--cursorWidth);"
+			></div>
 		</div>
 	</div>
-	<section id="home" class="w-full flex flex-col justify-center items-center">
+	<section id="home" class="flex flex-col justify-center items-center">
 		<div class="w-auto flex flex-col justify-center items-center h-screen">
-			<h1 class="text-8xl pb-4 font-normal">{$t('title')}</h1>
-			<div class="w-full border-1 border-black"></div>
-			<h2 class="text-5xl pt-4 font-light">{$t('job')}</h2>
+			<h1 class="flex text-3xl md:text-8xl pb-4 font-normal">
+				{$t('welcome')}
+				<div class="clap">👋</div>
+				, {$t('iamluca')}
+			</h1>
+			<div class="w-full border border-black"></div>
+			<h2 class="text-2xl md:text-5xl pt-4 font-light">{$t('job')}</h2>
 		</div>
 		<div class="w-4/5 bio h-4/5">
 			<p class="text-xl">
@@ -131,7 +135,7 @@
 		</div>
 	</section>
 	<section id="contact" class="flex justify-center items-center py-8">
-		<div class="flex justify-center items-center w-full">
+		<div class="flex flex-col md:flex-row gap-y-4 md:gap-y-0 justify-center items-center w-full">
 			<div class="flex justify-center gap-x-4 w-1/3">
 				<a
 					href="https://www.linkedin.com/in/luca-deltort/"
@@ -163,7 +167,6 @@
 				</form>
 			</div>
 		</div>
-		ƒ
 	</section>
 </div>
 
@@ -172,25 +175,14 @@
 		border-left-width: 1px;
 	}
 
-	.border-1 {
-		border-width: 1px;
-	}
-
-	a {
-		position: relative;
+	.clap {
+		user-select: none;
 		transition: transform 0.3s ease;
+		margin-left: 0.5rem;
 	}
 
-	a:hover {
-		transform: translateY(-4px) scale(1.1);
-	}
-
-	.flag {
-		transition: transform 0.3s ease;
-	}
-
-	.flag:hover {
-		transform: scale(1.1);
+	.clap:active {
+		transform: scale(1.5) rotate(25deg);
 	}
 
 	input,
@@ -201,15 +193,6 @@
 		transition:
 			border-color 0.3s ease,
 			transform 0.3s ease;
-	}
-
-	input:focus,
-	textarea:focus,
-	input:hover,
-	textarea:hover {
-		outline: none;
-		border-color: #7db9ec;
-		transform: translateX(+0.2rem);
 	}
 
 	textarea {
@@ -238,13 +221,52 @@
 			transform 0.3s ease;
 	}
 
-	.submit:hover {
-		background-color: #31485d;
-		color: #7db9ec;
-		transform: scale(1.2);
-	}
-
 	.submit:active {
 		transform: scale(0.8);
+	}
+
+	@media (min-width: 768px) {
+		a {
+			transition: transform 0.3s ease;
+		}
+
+		a:hover {
+			transform: translateY(-4px) scale(1.1);
+		}
+
+		.clap {
+			margin-left: 1rem;
+		}
+
+		.clap:hover {
+			transform: scale(1.1);
+		}
+
+		.clap:active {
+			transform: scale(1.5) rotate(25deg);
+		}
+
+		.flag {
+			transition: transform 0.3s ease;
+		}
+
+		.flag:hover {
+			transform: scale(1.1);
+		}
+
+		input:focus,
+		textarea:focus,
+		input:hover,
+		textarea:hover {
+			outline: none;
+			border-color: #7db9ec;
+			transform: translateX(+0.2rem);
+		}
+
+		.submit:hover {
+			background-color: #31485d;
+			color: #7db9ec;
+			transform: scale(1.2);
+		}
 	}
 </style>
