@@ -12,7 +12,7 @@
 				return 'https://skillicons.dev/icons?i=svelte';
 			case 'flutter':
 				return 'https://skillicons.dev/icons?i=flutter';
-			case 'Swift':
+			case 'swift':
 				return 'https://skillicons.dev/icons?i=swift';
 			default:
 				return 'https://skillicons.dev/icons?i=html';
@@ -37,8 +37,10 @@
 			{/if}
 		</div>
 	</div>
-	<div class="flex justify-between gap-x-5">
+	<div class="flex justify-start w-full">
 		<p>{$t(project.description)}</p>
+	</div>
+	<div class="flex justify-end">
 		{#each project.technologies as technology}
 			<div class="flex gap-x-2">
 				<img src={getIconTech(technology)} alt={technology} class="w-6 h-6" />
@@ -64,7 +66,9 @@
 		transition: transform 0.2s ease;
 	}
 
-	.btn-action:hover {
-		transform: scale(1.2);
+	@media (min-width: 768px) {
+		.btn-action:hover {
+			transform: scale(1.2);
+		}
 	}
 </style>

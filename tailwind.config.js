@@ -32,11 +32,12 @@ export default {
 		'p-1',
 		'text-epitechBlue',
 		'text-lbYellow',
-		'hover:text-white',
-		'hover:text-white, hover:bg-blackEgo',
-		'hover:transition-bg-color',
-		'hover:transition-ease',
-		'hover:transition-300'
+		'md:hover:text-white',
+		'md:hover:text-white',
+		'md:hover:bg-blackEgo',
+		'md:hover:transition-bg-color',
+		'md:hover:transition-ease',
+		'md:hover:transition-300'
 	],
 	plugins: []
 };

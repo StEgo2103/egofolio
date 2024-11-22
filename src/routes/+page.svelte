@@ -101,13 +101,13 @@
 	</div>
 	<section id="home" class="flex flex-col justify-center items-center">
 		<div class="w-auto flex flex-col justify-center items-center h-screen">
-			<h1 class="flex text-5xl md:text-8xl pb-4 font-normal">
+			<h1 class="flex text-3xl md:text-8xl pb-4 font-normal">
 				{$t('welcome')}
 				<div class="clap">👋</div>
 				, {$t('iamluca')}
 			</h1>
 			<div class="w-full border border-black"></div>
-			<h2 class="text-3xl md:text-5xl pt-4 font-light">{$t('job')}</h2>
+			<h2 class="text-2xl md:text-5xl pt-4 font-light">{$t('job')}</h2>
 		</div>
 		<div class="w-4/5 bio h-4/5">
 			<p class="text-xl">
@@ -135,7 +135,7 @@
 		</div>
 	</section>
 	<section id="contact" class="flex justify-center items-center py-8">
-		<div class="flex justify-center items-center w-full">
+		<div class="flex flex-col md:flex-row gap-y-4 md:gap-y-0 justify-center items-center w-full">
 			<div class="flex justify-center gap-x-4 w-1/3">
 				<a
 					href="https://www.linkedin.com/in/luca-deltort/"
@@ -175,21 +175,10 @@
 		border-left-width: 1px;
 	}
 
-	.flag {
-		transition: transform 0.3s ease;
-	}
-
-	.flag:hover {
-		transform: scale(1.1);
-	}
-
 	.clap {
 		user-select: none;
 		transition: transform 0.3s ease;
-		margin-left: 1rem;
-	}
-	.clap:hover {
-		transform: scale(1.1);
+		margin-left: 0.5rem;
 	}
 
 	.clap:active {
@@ -204,15 +193,6 @@
 		transition:
 			border-color 0.3s ease,
 			transform 0.3s ease;
-	}
-
-	input:focus,
-	textarea:focus,
-	input:hover,
-	textarea:hover {
-		outline: none;
-		border-color: #7db9ec;
-		transform: translateX(+0.2rem);
 	}
 
 	textarea {
@@ -241,12 +221,6 @@
 			transform 0.3s ease;
 	}
 
-	.submit:hover {
-		background-color: #31485d;
-		color: #7db9ec;
-		transform: scale(1.2);
-	}
-
 	.submit:active {
 		transform: scale(0.8);
 	}
@@ -258,6 +232,41 @@
 
 		a:hover {
 			transform: translateY(-4px) scale(1.1);
+		}
+
+		.clap {
+			margin-left: 1rem;
+		}
+
+		.clap:hover {
+			transform: scale(1.1);
+		}
+
+		.clap:active {
+			transform: scale(1.5) rotate(25deg);
+		}
+
+		.flag {
+			transition: transform 0.3s ease;
+		}
+
+		.flag:hover {
+			transform: scale(1.1);
+		}
+
+		input:focus,
+		textarea:focus,
+		input:hover,
+		textarea:hover {
+			outline: none;
+			border-color: #7db9ec;
+			transform: translateX(+0.2rem);
+		}
+
+		.submit:hover {
+			background-color: #31485d;
+			color: #7db9ec;
+			transform: scale(1.2);
 		}
 	}
 </style>
