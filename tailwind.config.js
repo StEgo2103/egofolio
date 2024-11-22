@@ -17,6 +17,12 @@ export default {
 			},
 			transitionDuration: {
 				300: '300ms'
+			},
+			screens: {
+				mb: '375px',
+				hd: '1920px',
+				'2k': '2048px',
+				'4k': '3840px'
 			}
 		}
 	},
