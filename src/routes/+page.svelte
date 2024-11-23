@@ -1,4 +1,5 @@
 <script lang="ts">
+	import WordRotate from './../lib/components/word-rotate.svelte';
 	import ProjectCard from './../lib/components/project-card.svelte';
 	import { onMount } from 'svelte';
 	import { t, locale } from 'svelte-i18n';
@@ -102,12 +103,11 @@
 	<section id="home" class="flex flex-col justify-center items-center">
 		<div class="w-auto flex flex-col justify-center items-center h-screen">
 			<h1 class="flex text-3xl md:text-8xl pb-4 font-normal">
-				{$t('welcome')}
-				<div class="clap">👋</div>
-				, {$t('iamluca')}
+				<WordRotate
+					words={[$t('welcome'), $t('iamluca'), $t('job')]}
+					class="text-5xl md:text-8xl"
+				/>
 			</h1>
-			<div class="w-full border border-black"></div>
-			<h2 class="text-2xl md:text-5xl pt-4 font-light">{$t('job')}</h2>
 		</div>
 		<div class="w-4/5 bio h-4/5">
 			<p class="text-xl">
@@ -175,16 +175,6 @@
 		border-left-width: 1px;
 	}
 
-	.clap {
-		user-select: none;
-		transition: transform 0.3s ease;
-		margin-left: 0.5rem;
-	}
-
-	.clap:active {
-		transform: scale(1.5) rotate(25deg);
-	}
-
 	input,
 	textarea {
 		border: 1px solid black;
@@ -232,18 +222,6 @@
 
 		a:hover {
 			transform: translateY(-4px) scale(1.1);
-		}
-
-		.clap {
-			margin-left: 1rem;
-		}
-
-		.clap:hover {
-			transform: scale(1.1);
-		}
-
-		.clap:active {
-			transform: scale(1.5) rotate(25deg);
 		}
 
 		.flag {
