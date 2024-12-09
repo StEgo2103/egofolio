@@ -12,5 +12,6 @@
 	"egofolio": "Egofolio est mon portfolio personnel, conçu et développé par moi-même avec SvelteKit.",
 	"savy": "Savy est notre EIP (Epitech Innovative Project), une solution d’apprentissage linguistique propulsée par l’intelligence artificielle (IA) toujours en développement. Je conçois et développe l'application iOS en Swift dans une équipe de six personnes.",
 	"maker": "Maker est une plateforme web pour automatiser des actions, similaire à Zapier ou IFTTT. J'ai conçu et travaillé sur le front-end en utilisant Flutter dans une équipe de cinq personnes.",
-	"send": "Envoyer"
+	"send": "Envoyer",
+	"download_cv": "Télécharger mon CV"
 }

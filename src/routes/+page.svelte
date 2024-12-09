@@ -8,6 +8,8 @@
 	import frFlag from '$lib/img/flag_fr.svg';
 	import GitHub from '$lib/img/github-dark.svg';
 	import LinkedIn from '$lib/img/linkedin.svg';
+	import cvFr from '$lib/cv/cv-fr.pdf';
+	import cvEn from '$lib/cv/cv-en.pdf';
 
 	let cursor;
 	let activeSection = 'home';
@@ -150,6 +152,9 @@
 			</div>
 			<div class="flex justify-center w-1/3">
 				<!-- <button>Download my CV</button> -->
+					<button class="submit cv" on:click={() => window.open(lang == 'fr' ? cvFr : cvEn, '_blank')}>
+						{$t('download_cv')}
+					</button>
 			</div>
 			<div class="flex justify-center w-1/3">
 				<form
@@ -163,7 +168,7 @@
 					<input type="text" name="name" placeholder="Name" class="w-80" required />
 					<input type="email" name="email" placeholder="Email" class="w-80" required />
 					<textarea name="message" placeholder="Message" class="w-80" rows="5" required></textarea>
-					<button class="flex justify-start submit" type="submit">{$t('send')}</button>
+					<button class="flex justify-start submit send" type="submit">{$t('send')}</button>
 				</form>
 			</div>
 		</div>
@@ -203,12 +208,19 @@
 		border-radius: 0.5rem;
 		padding: 0.2rem;
 		margin-top: 0.4rem;
-		width: 5rem;
 		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 		transition:
 			background-color 0.3s ease,
 			color 0.3s ease,
 			transform 0.3s ease;
+	}
+
+	.cv {
+		width: 14rem;
+	}
+
+	.send {
+		width: 5rem;
 	}
 
 	.submit:active {
