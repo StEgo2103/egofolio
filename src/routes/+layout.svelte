@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 	import '../app.css';
-	import '$lib/styles/global.pcss';
 	import { locale } from '../i18n';
 
-	locale.set('fr');
+	let { children } = $props();
+
+	locale.set('en');
 </script>
 
-<slot />
+{@render children()}
