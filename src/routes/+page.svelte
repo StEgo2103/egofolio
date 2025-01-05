@@ -13,3 +13,4 @@
 <div class="flex h-screen items-center justify-center">
 	<LogoAnimate size={1.5} />
 </div>
+
