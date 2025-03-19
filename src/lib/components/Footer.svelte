@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { language } from '$lib/stores/langStore';
-	import CvEn from '$lib/assets/cv/cv-en.pdf';
-	import CvFr from '$lib/assets/cv/cv-fr.pdf';
 	import GitHub from '$lib/assets/github.svelte';
 	import Linkedin from '$lib/assets/linkedin.svelte';
 	import { t } from 'svelte-i18n';
 
+	const CvEn = '/cv/cv-en.pdf';
+	const CvFr = '/cv/cv-fr.pdf';
 	let lang = 'En';
 
 	const unsubscribe = language.subscribe((l) => {
