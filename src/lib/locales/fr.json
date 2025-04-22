@@ -26,6 +26,7 @@
 	"projectsDescriptionSavy": "Savy est notre EIP (Epitech Innovative Project), une solution d'apprentissage linguistique propulsée par l'IA. La solution est une application mobile qui permet d'échanger, à l'écrit comme à l'oral, avec des Echos (personnalités IA) accompagnés par un assistant personnel, Savy. Je suis en charge de l'application iOS avec Swift, du site vitrine avec Svelte et du design.",
 	"projectsDescriptionMaker": "Maker est une plateforme web pour automatiser des actions, similaire à Zapier ou IFTTT. J'ai designé et travaillé sur le front-end en utilisant Flutter.",
 	"projectsDescriptionEgofolio": "Egofolio est mon site web personnel. J'ai designé et codé ce site en Svelte.",
+	"projectsDescriptionWAU": "Qui de nous ? est un petit site web fait en Svelte pour afficher avec des graphiques les résultats d'un Google Form entre amis.",
 	"contact": "Contact",
 	"contactDownload": "Télécharger mon CV"
 }

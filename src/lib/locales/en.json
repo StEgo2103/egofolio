@@ -26,6 +26,7 @@
 	"projectsDescriptionSavy": "Savy is our EIP (Epitech Innovative Project), an AI-powered language learning solution. The application is a mobile solution that allows users to interact, both in writing and speaking, with Echos (AI personalities) supported by a personal assistant named Savy. I am responsible for the iOS app using Swift, the showcase website with Svelte, and the design.",
 	"projectsDescriptionMaker": "Maker is a web platform for automating actions, similar to Zapier or IFTTT. I designed and developed the front-end using Flutter.",
 	"projectsDescriptionEgofolio": "Egofolio is my personal website. I designed and coded it using Svelte.",
+	"projectsDescriptionWAU": "Qui de nous ? (Who among us?) is a small website made in Svelte to display the results of a Google Form between friends with graphs.",
 	"contact": "Contact",
 	"contactDownload": "Download my resume"
 }

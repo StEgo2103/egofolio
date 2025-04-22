@@ -48,6 +48,16 @@ const projects = [
 		backgroundColour: '#102ea0',
 		textColour: '#ffffff',
 		description: 'projectsDescriptionEgofolio'
+	},
+	{
+		name: 'Qui de nous ?',
+		tag: 'projectsTagPersonal',
+		technologies: ['Svelte'],
+		website: 'https://who-among-us.deltort.net',
+		github: 'https://github.com/StEgo2103/who-among-us',
+		backgroundColour: '#ecf3f9',
+		textColour: '#578fc9',
+		description: 'projectsDescriptionWAU'
 	}
 ];
 
