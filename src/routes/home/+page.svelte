@@ -86,6 +86,6 @@
 				{/each}
 			</div>
 		</div>
-		<div id="contacts" class="mt-20"><Footer /></div>
+		<div id="contacts" class="mt-6 sm:mt-20"><Footer /></div>
 	</div>
 </div>

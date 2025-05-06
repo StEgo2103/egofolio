@@ -22,7 +22,7 @@ const projects = [
 	{
 		name: 'Savy',
 		tag: 'projectsTagSchool',
-		technologies: ['Swift', 'Svelte'],
+		technologies: ['Swift', 'SwiftUI', 'Svelte', 'SvelteKit', 'TailwindCSS', 'Netlify'],
 		website: 'https://savy-eip.netlify.app',
 		github: 'https://github.com/Savy-EIP',
 		backgroundColour: '#9149f6',
@@ -42,7 +42,7 @@ const projects = [
 	{
 		name: 'Egofolio',
 		tag: 'projectsTagPersonal',
-		technologies: ['Svelte'],
+		technologies: ['Svelte', 'SvelteKit', 'TailwindCSS', 'Netlify'],
 		website: 'https://deltort.net',
 		github: 'https://github.com/StEgo2103/egofolio',
 		backgroundColour: '#102ea0',
@@ -52,7 +52,7 @@ const projects = [
 	{
 		name: 'Qui de nous ?',
 		tag: 'projectsTagPersonal',
-		technologies: ['Svelte'],
+		technologies: ['Svelte', 'SvelteKit', 'Charts.js', 'TailwindCSS', 'Netlify'],
 		website: 'https://who-among-us.deltort.net',
 		github: 'https://github.com/StEgo2103/who-among-us',
 		backgroundColour: '#ecf3f9',

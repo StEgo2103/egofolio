@@ -21,12 +21,12 @@
 	"projectsWebsite": "Website",
 	"projectsMore": "More",
 	"projectsLess": "Less",
-	"projectsDescriptionReepair": "Reepair is a platform that connects professionals and individuals to give objects a second life. It promotes recycling and helps save money. The platform is divided into two sections: one for individuals and one for professionals. I worked on the professional section using Flutter.",
-	"projectsDescriptionTOP": "The Optimum Prod is a business management platform that helps track employee attendance and project profitability through precise monitoring of various criteria. I worked on the employee section using Flutter.",
-	"projectsDescriptionSavy": "Savy is our EIP (Epitech Innovative Project), an AI-powered language learning solution. The application is a mobile solution that allows users to interact, both in writing and speaking, with Echos (AI personalities) supported by a personal assistant named Savy. I am responsible for the iOS app using Swift, the showcase website with Svelte, and the design.",
-	"projectsDescriptionMaker": "Maker is a web platform for automating actions, similar to Zapier or IFTTT. I designed and developed the front-end using Flutter.",
-	"projectsDescriptionEgofolio": "Egofolio is my personal website. I designed and coded it using Svelte.",
-	"projectsDescriptionWAU": "Qui de nous ? (Who among us?) is a small website made in Svelte to display the results of a Google Form between friends with graphs.",
+	"projectsDescriptionReepair": "Reepair is a platform that connects professionals and individuals to give objects a second life. It promotes recycling and helps save money. The platform is divided into two sections: one for individuals and one for professionals. I worked on the professional section using Flutter.<br /><br />● Creating a calendar from scratch<br />● Mobile responsive<br />● MVVM architecture",
+	"projectsDescriptionTOP": "The Optimum Prod is a business management platform that helps track employee attendance and project profitability through precise monitoring of various criteria. I worked on the employee section using Flutter.<br /><br />● Camera management<br />● Offline mode<br />● MVVM architecture",
+	"projectsDescriptionSavy": "Savy is our EIP (Epitech Innovative Project), an AI-powered language learning solution. The application is a mobile solution that allows users to interact, both in writing and speaking, with Echos (AI personalities) supported by a personal assistant named Savy. I am responsible for the iOS app using Swift, the showcase website with Svelte, and the design with Figma.",
+	"projectsDescriptionMaker": "Maker is a web platform for automating actions, similar to Zapier or IFTTT. I designed and developed the front-end using Flutter.<br /><br />● Authentication with Google and GitHub<br />● Mobile responsive<br />● MVVM architecture",
+	"projectsDescriptionEgofolio": "Egofolio is my personal website. I designed the solution with Figma and coded it using Svelte.",
+	"projectsDescriptionWAU": "Qui de nous ? (Who among us?) is a small website made in Svelte to display the results of a Google Form between friends with graphs.<br /><br />● Importing an XLSX<br />● Color selection for each player<br />● Charts with Chart.js",
 	"contact": "Contact",
 	"contactDownload": "Download my resume"
 }

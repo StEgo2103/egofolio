@@ -71,7 +71,7 @@
 					class="rounded-m mt-2 p-2 text-sm font-normal"
 					style="background-color: {project.backgroundColour}; color: {project.textColour};"
 				>
-					{$t(project.description)}
+					{@html $t(project.description)}
 				</div>
 			{/if}
 		</div>
