@@ -25,7 +25,7 @@
 				</p>
 			</div>
 			<div
-				class="mt-20 flex w-full flex-col justify-between space-y-12 sm:flex-row sm:items-center sm:space-y-0"
+				class="mt-20 flex w-full flex-col justify-between space-y-12 sm:flex-row sm:space-y-0"
 			>
 				<div class="flex flex-col sm:w-1/2">
 					<h1 class="text-xl font-medium">{$t('aboutEducations')}</h1>

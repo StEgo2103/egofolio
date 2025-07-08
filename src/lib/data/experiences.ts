@@ -1,5 +1,13 @@
 const listExperience = [
 	{
+		job: 'aboutExperiencesDevid2',
+		company: 'Dev-id',
+		location: 'Toulouse',
+		startDate: 'aboutExperiencesDevid2StartDate',
+		endDate: 'aboutExperiencesDevid2EndDate',
+		link: 'https://www.dev-id.fr/'
+	},
+	{
 		job: 'aboutExperiencesDevid',
 		company: 'Dev-id',
 		location: 'Toulouse',
