@@ -51,7 +51,7 @@
 							target="_blank"
 							class="ml-2 text-sm font-light underline underline-offset-8 transition-all duration-300 hover:underline-offset-1"
 						>
-							Github
+							GitHub
 						</a>
 					{/if}
 				</div>
